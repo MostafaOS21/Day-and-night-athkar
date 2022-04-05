@@ -1,0 +1,298 @@
+@import url("https://fonts.googleapis.com/css2?family=Tajawal:wght@300;400;500;700&display=swap");
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: #6600f1 !important;
+  font-family: "Tajawal", sans-serif;
+  color: white !important;
+  overflow-x: hidden;
+  height: 100vh;
+}
+body ::-moz-selection {
+  background-color: white;
+  color: #6600f1;
+}
+body ::selection {
+  background-color: white;
+  color: #6600f1;
+}
+body .time {
+  -webkit-transition: 0.8s ease-in-out;
+  transition: 0.8s ease-in-out;
+  -webkit-transform: translateY(30px);
+          transform: translateY(30px);
+  opacity: 0;
+}
+body .time.active {
+  opacity: 1;
+  -webkit-transform: translateY(0);
+          transform: translateY(0);
+}
+body .doaa-to-me {
+  top: -100px;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
+.container {
+  opacity: 0;
+  -webkit-transform: translateY(30px);
+          transform: translateY(30px);
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+.container.active {
+  opacity: 1;
+  -webkit-transform: translateY(0px);
+          transform: translateY(0px);
+}
+.container .thekr {
+  background-color: #3e0094;
+  width: 100%;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+.container .thekr .btn {
+  width: 50px;
+  height: 50px;
+  color: #6600f1;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+.container .thekr .btn:hover {
+  -webkit-transform: translateY(-1px);
+          transform: translateY(-1px);
+  -webkit-box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.508);
+          box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.508);
+}
+
+.day,
+.night,
+.trans-btn {
+  background-color: black;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+  cursor: pointer;
+}
+.day a,
+.night a,
+.trans-btn a {
+  color: white;
+  text-decoration: none;
+}
+.day:hover,
+.night:hover,
+.trans-btn:hover {
+  -webkit-transform: translateY(-5px);
+          transform: translateY(-5px);
+  background-color: white;
+  color: black;
+}
+.day:hover a,
+.night:hover a,
+.trans-btn:hover a {
+  color: black;
+}
+
+.end-of-program {
+  opacity: 0;
+  -webkit-transform: translateY(10px);
+          transform: translateY(10px);
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+  gap: 120px;
+}
+.end-of-program.show {
+  opacity: 1;
+  -webkit-transform: translateY(0);
+          transform: translateY(0);
+}
+.end-of-program .image {
+  width: 200px;
+  height: 200px;
+  background-image: url(mostafa.jpg) !important;
+  background-position: center -2px;
+  background-size: cover;
+  border-radius: 50%;
+}
+.end-of-program .image a {
+  width: 50px;
+  height: 50px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-decoration: none;
+  top: -80px;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  -webkit-transition: 0.2s;
+  transition: 0.2s;
+}
+.end-of-program .image a.animate {
+  -webkit-animation: icons-animate 1s ease-out forwards;
+          animation: icons-animate 1s ease-out forwards;
+}
+@-webkit-keyframes icons-animate {
+  from {
+    top: 0;
+  }
+  to {
+    top: -80px;
+  }
+}
+@keyframes icons-animate {
+  from {
+    top: 0;
+  }
+  to {
+    top: -80px;
+  }
+}
+.end-of-program .image a:hover {
+  background-color: white;
+}
+.end-of-program .image a:hover:nth-child(1) {
+  background-color: #171515;
+}
+.end-of-program .image a:nth-child(2) {
+  right: -60px;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+}
+.end-of-program .image a:nth-child(2):hover {
+  color: #0e76a8 !important;
+}
+.end-of-program .image a:nth-child(2).animate {
+  -webkit-animation: icons-animate-2 1s ease-out forwards;
+          animation: icons-animate-2 1s ease-out forwards;
+}
+@-webkit-keyframes icons-animate-2 {
+  from {
+    right: 0px;
+  }
+  to {
+    right: -60px;
+  }
+}
+@keyframes icons-animate-2 {
+  from {
+    right: 0px;
+  }
+  to {
+    right: -60px;
+  }
+}
+.end-of-program .image a:nth-child(3) {
+  top: unset;
+  bottom: -80px;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+}
+.end-of-program .image a:nth-child(3):hover {
+  color: #008ad3 !important;
+}
+.end-of-program .image a:nth-child(3).animate {
+  -webkit-animation: icons-animate-3 1s ease-out forwards;
+          animation: icons-animate-3 1s ease-out forwards;
+}
+@-webkit-keyframes icons-animate-3 {
+  from {
+    bottom: 0;
+  }
+  to {
+    bottom: -80px;
+  }
+}
+@keyframes icons-animate-3 {
+  from {
+    bottom: 0;
+  }
+  to {
+    bottom: -80px;
+  }
+}
+.end-of-program .image a:nth-child(4) {
+  left: -60px;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+}
+.end-of-program .image a:nth-child(4):hover i {
+  background: -webkit-gradient(linear, left top, left bottom, from(#8a3ab9), color-stop(#bc2a8d), color-stop(#fccc63), to(#fbad50));
+  background: linear-gradient(#8a3ab9, #bc2a8d, #fccc63, #fbad50);
+  -webkit-text-fill-color: transparent;
+  -webkit-background-clip: text;
+          background-clip: text;
+}
+.end-of-program .image a:nth-child(4).animate {
+  -webkit-animation: icons-animate-4 1s ease-out forwards;
+          animation: icons-animate-4 1s ease-out forwards;
+}
+@-webkit-keyframes icons-animate-4 {
+  from {
+    left: 0px;
+  }
+  to {
+    left: -60px;
+  }
+}
+@keyframes icons-animate-4 {
+  from {
+    left: 0px;
+  }
+  to {
+    left: -60px;
+  }
+}
+.end-of-program h3:nth-child(1) {
+  color: #6600f1;
+}
+
+.hide {
+  float: right;
+  opacity: 0;
+}
+
+.go-up {
+  -webkit-animation: go-up-anim 0.5s ease-in-out forwards;
+          animation: go-up-anim 0.5s ease-in-out forwards;
+  background-color: red;
+}
+.go-up.night {
+  -webkit-animation-delay: 0.2s;
+          animation-delay: 0.2s;
+}
+@-webkit-keyframes go-up-anim {
+  from {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+  to {
+    -webkit-transform: translateY(-1000%);
+            transform: translateY(-1000%);
+  }
+}
+@keyframes go-up-anim {
+  from {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+  to {
+    -webkit-transform: translateY(-1000%);
+            transform: translateY(-1000%);
+  }
+}

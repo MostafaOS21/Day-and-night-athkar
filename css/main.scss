@@ -1,0 +1,219 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+@import url("https://fonts.googleapis.com/css2?family=Tajawal:wght@300;400;500;700&display=swap");
+
+$purple_col: #6600f1;
+$font_col: white;
+$trans_main: 0.3s;
+body {
+  background-color: $purple_col !important;
+  font-family: "Tajawal", sans-serif;
+  color: $font_col !important;
+  overflow-x: hidden;
+  height: 100vh;
+  ::selection {
+    background-color: white;
+    color: $purple_col;
+  }
+  .time {
+    transition: $trans_main + 0.5 ease-in-out;
+    transform: translateY(30px);
+    opacity: 0;
+    &.active {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  .doaa-to-me {
+    top: -100px;
+    transition: 0.3s;
+  }
+}
+
+.container {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: $trans_main;
+  &.active {
+    opacity: 1;
+    transform: translateY(0px);
+  }
+  .thekr {
+    background-color: #3e0094;
+    width: 100%;
+    transition: $trans_main;
+    .btn {
+      width: 50px;
+      height: 50px;
+      color: $purple_col;
+      transition: $trans_main;
+      &:hover {
+        transform: translateY(-1px);
+        box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.508);
+      }
+    }
+  }
+}
+
+// Butttons Style
+.day,
+.night,
+.trans-btn {
+  // width: 305px;
+  background-color: black;
+  transition: $trans_main + 0.2;
+  cursor: pointer;
+  a {
+    color: white;
+    text-decoration: none;
+  }
+  &:hover {
+    transform: translateY(-5px);
+    background-color: white;
+    color: black;
+    a {
+      color: black;
+    }
+  }
+}
+
+.end-of-program {
+  opacity: 0;
+  transform: translateY(10px);
+  transition: $trans_main;
+  gap: 120px;
+  &.show {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  .image {
+    width: 200px;
+    height: 200px;
+    background-image: url(mostafa.jpg) !important;
+    background-position: center -2px;
+    background-size: cover;
+    border-radius: 50%;
+    a {
+      width: 50px;
+      height: 50px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-decoration: none;
+      top: -80px;
+      left: 50%;
+      transform: translateX(-50%);
+      transition: 0.2s;
+      &.animate {
+        animation: icons-animate 1s ease-out forwards;
+        @keyframes icons-animate {
+          from {
+            top: 0;
+          }
+          to {
+            top: -80px;
+          }
+        }
+      }
+      &:hover {
+        background-color: white;
+        &:nth-child(1) {
+          background-color: #171515;
+        }
+      }
+    }
+    a:nth-child(2) {
+      right: -60px;
+      top: 50%;
+      transform: translateY(-50%);
+      &:hover {
+        color: #0e76a8 !important;
+      }
+      &.animate {
+        animation: icons-animate-2 1s ease-out forwards;
+        @keyframes icons-animate-2 {
+          from {
+            right: 0px;
+          }
+          to {
+            right: -60px;
+          }
+        }
+      }
+    }
+    a:nth-child(3) {
+      top: unset;
+      bottom: -80px;
+      left: 50%;
+      transform: translateX(-50%);
+      &:hover {
+        color: #008ad3 !important;
+      }
+      &.animate {
+        animation: icons-animate-3 1s ease-out forwards;
+        @keyframes icons-animate-3 {
+          from {
+            bottom: 0;
+          }
+          to {
+            bottom: -80px;
+          }
+        }
+      }
+    }
+    a:nth-child(4) {
+      left: -60px;
+      top: 50%;
+      transform: translateY(-50%);
+      &:hover {
+        i {
+          background: linear-gradient(#8a3ab9, #bc2a8d, #fccc63, #fbad50);
+          -webkit-text-fill-color: transparent;
+          background-clip: text;
+        }
+      }
+      &.animate {
+        animation: icons-animate-4 1s ease-out forwards;
+        @keyframes icons-animate-4 {
+          from {
+            left: 0px;
+          }
+          to {
+            left: -60px;
+          }
+        }
+      }
+    }
+  }
+  h3:nth-child(1) {
+    color: $purple_col;
+  }
+}
+
+// images Animation
+
+.hide {
+  float: right;
+  // transform: translateX(-5000px);
+  opacity: 0;
+}
+
+.go-up {
+  animation: go-up-anim 0.5s ease-in-out forwards;
+  &.night {
+    animation-delay: 0.2s;
+  }
+  background-color: red;
+  @keyframes go-up-anim {
+    from {
+      transform: translateY(0);
+    }
+    to {
+      transform: translateY(-1000%);
+    }
+  }
+}
